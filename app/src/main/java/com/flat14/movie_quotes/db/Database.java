@@ -21,8 +21,8 @@ public class Database {
 
     private void initWrongAnswers() {
         wrongAnswers = new ArrayList<>();
-        wrongAnswers.add("Wrong you stupid fuck.");
-        wrongAnswers.add("Hey fuck face, try again.");
+        wrongAnswers.add("Wrong you stupid ass.");
+        wrongAnswers.add("Hey donkey, try again.");
         wrongAnswers.add("Jesus, even my 2 year old know this one.");
         wrongAnswers.add("You are not worthy of this app. Please uninstall.");
         wrongAnswers.add("Cmon, use Google. I'll pretend you actually knew the answer.");
@@ -30,19 +30,20 @@ public class Database {
         wrongAnswers.add("Wrong!!!!!!!!!!!!");
         wrongAnswers.add("Why do you even try?");
         wrongAnswers.add("It's is so simple.");
-        wrongAnswers.add("Have you notice a qquare box in your living room? Try to use it for once.");
+        wrongAnswers.add("Have you notice a square box in your living room? Try to use it for once.");
         wrongAnswers.add("Stop watching reality TV.");
         wrongAnswers.add("Your favorite show must be the Teletubbies because you know nothing about films.");
         wrongAnswers.add("Please, stop playing. You suck!");
         wrongAnswers.add("You know nothing Jon Snow.");
-        wrongAnswers.add("Are you failing on purpose just to see the wrong answers? This is a game. Fucking play it.");
+        wrongAnswers.add("Are you failing on purpose just to see the wrong answers? This is a game. Try to play it.");
     }
 
     private void initQuotes() {
         quotes = new ArrayList<>();
         quotes.add(new Quote("This is your last chance. After this, there is no turning back. You take the blue pill, the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill, you stay in Wonderland and I show you how deep the rabbit-hole goes.","Morpheus","The Matrix"));
-        quotes.add(new Quote("Hasta la vista BABY!.", "T-100", "Terminator 2"));
+        quotes.add(new Quote("Hasta la vista BABY!.", "T-100", "Terminator"));
         quotes.add(new Quote("RRWWWGG", "Chewbacca", "Star wars"));
+        quotes.add(new Quote("I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you I don't have money. But what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me a nightmare for people like you. If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you.","Bryan","Taken"));
         quotes.add(new Quote("You talkin' to me? Then who the hell else are you talking... you talking to me? Well I'm the only one here. Who the fuck do you think you're talking to?", "Travis Bickle", "Taxi Driver"));
         quotes.add(new Quote("I am Groot", "Groot", "Guardians of The Galaxy"));
         quotes.add(new Quote("“They may take our lives, but they will never take... our FREEDOM!","William Wallace","Braveheart"));
@@ -53,7 +54,7 @@ public class Database {
         quotes.add(new Quote("Why so serious?","Joker","The Dark Knight"));
         quotes.add(new Quote("Do or do not. There is no try","Yoda","Star wars"));
         quotes.add(new Quote("I'm the king of the world!","Jack Dawson", "Titanic"));
-        quotes.add(new Quote("I'll be back", "T-100", "Terminator 2"));
+        quotes.add(new Quote("I'll be back", "T-100", "Terminator"));
         quotes.add(new Quote("You're going to need a bigger boat", "Chief Brody", "jaws"));
         quotes.add(new Quote("Wax on, wax off.","Daniel", "The Karate Kid"));
         quotes.add(new Quote("Houston, we have a problem","Jim Lovell","Apollo 13"));
@@ -113,10 +114,10 @@ public class Database {
     public String getWrongAnswer() {
         int wrongIndex = -1;
         do {
-            wrongIndex = new Random().nextInt(quotes.size() - 1);
+            wrongIndex = new Random().nextInt(wrongAnswers.size() - 1);
         } while (wrongIndex == -1 || wrongIndex == lastWrongAnswerIndex);
         lastWrongAnswerIndex = wrongIndex;
-        return wrongAnswers.get(wrongIndex);
+        return wrongAnswers.get(lastWrongAnswerIndex);
     }
 
 }

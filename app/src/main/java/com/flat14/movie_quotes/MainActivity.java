@@ -1,5 +1,6 @@
 package com.flat14.movie_quotes;
 
+import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -62,7 +63,9 @@ public class MainActivity extends BaseActivity implements TextView.OnEditorActio
             if (titleText.getText().toString().trim().equalsIgnoreCase(currentQuote.movieTitle)) {
                 startActivity(new Intent(this, CorrectAnswerActivity.class));
             } else {
-                startActivity(new Intent(this, WrongAnswerActivity.class));
+                Intent intent =  new Intent(this, WrongAnswerActivity.class);
+                intent.putExtra(Quote.KEY, currentQuote);
+                startActivity(intent);
             }
         }
         return false;

@@ -1,44 +1,44 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/blue3">
 
-    <TextView
-        android:textColor="@android:color/white"
-        android:id="@+id/movie_quote"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:layout_margin="20dp"
-        android:textStyle="bold|italic"
-        android:layout_above="@+id/movie_actor" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:text="RAY"
-        android:layout_margin="20dp"
-        android:textColor="@android:color/darker_gray"
-        android:id="@+id/movie_actor"
-       android:layout_above="@+id/movie_title" />
+        <TextView
+            android:id="@+id/movie_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/movie_actor"
+            android:layout_margin="20dp"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold|italic" />
 
-    <EditText
-        android:textColor="@android:color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Write the movie title"
-        android:textColorHint="@android:color/darker_gray"
-        android:singleLine="true"
-        android:id="@+id/movie_title"
-        android:focusableInTouchMode="true"
-        android:focusable="true"
-        android:layout_margin="20dp"
-        android:layout_centerInParent="true"
-        />
+        <TextView
+            android:id="@+id/movie_actor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/movie_title"
+            android:layout_margin="10dp"
+            android:gravity="right"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
+        <EditText
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:hint="Write the movie title"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray" />
 
-</RelativeLayout>
+    </LinearLayout>
+</ScrollView>

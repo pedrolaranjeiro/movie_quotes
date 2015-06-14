@@ -2,13 +2,14 @@
     <string name="app_name">Movie Quotes</string>
     <string name="activity__wrong_title">Incorrect!</string>
     <string name="activity__wrong_try_again">Try again</string>
-    <string name="activity__wrong_ask_friends">Ask Friends</string>
-    <string name="activity__wrong_info">You can either try again or ask you friends to help you because you are too stupid to find it by yourself.</string>
+    <string name="activity__wrong_ask">Ask Someone</string>
+    <string name="activity__wrong_ask_message">I am using the app Movie Quotes and I need your help. What is the title of the movie with this quote?</string>
+    <string name="app_url">https://play.google.com/store/apps/details?id=com.flat14.movie_quotes</string>
+    <string name="activity__wrong_info">You can either try again or ask your friends to help you because you are too stupid to find it by yourself.</string>
     <string name="activity__correct_info">Correct!</string>
     <string name="activity__correct_next_quote">Next Quote</string>
-
-
     <string name="activity__finish_info">Wow, you finished the game. Now you need to wait for more famous quotes to be added. Why don\'t you suggest one?</string>
     <string name="activity__finish_suggest_quote">Suggest Quote</string>
+    <string name="share_intent_chooser_title">Choose</string>
 
 </resources>
