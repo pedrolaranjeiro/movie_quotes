@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="apple_green">#83a700</color>
+    <color name="lime">#c0f500</color>
+    <color name="green1">#9FCA00</color>
+    <color name="green2">#AFDE00</color>
+    <color name="green3">#90B800</color>
+
+
+    <color name="red1">#D30000</color>
+    <color name="red2">#FF0000</color>
+    <color name="red3">#E80000</color>
+    <color name="red4">#C00000</color>
+    <color name="red5">#AE0000</color>
+
+    <color name="blue1">#065986</color>
+    <color name="blue2">#076EA6</color>
+    <color name="blue3">#066293</color>
+    <color name="blue4">#06517A</color>
+    <color name="blue5">#054A6F</color>
+
+</resources>

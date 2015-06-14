@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red3">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:text="@string/activity__wrong_title"
+        android:drawableTop="@drawable/ic_clear_white_48dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/wrong_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:text="@string/activity__wrong_info" />
+
+    <Button
+        android:id="@+id/try_again"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:background="@color/red4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity__wrong_try_again" />
+
+    <Button
+        android:id="@+id/post_facebook"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/red5"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity__wrong_ask_friends" />
+
+</LinearLayout>

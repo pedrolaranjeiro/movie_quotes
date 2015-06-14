@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue5">
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:text="@string/activity__finish_info"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/finish"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/blue1"
+        android:text="@string/activity__finish_suggest_quote" />
+
+</LinearLayout>
