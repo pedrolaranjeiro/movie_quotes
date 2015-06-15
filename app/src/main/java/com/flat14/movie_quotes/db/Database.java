@@ -46,7 +46,7 @@ public class Database {
         quotes.add(new Quote("I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you I don't have money. But what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me a nightmare for people like you. If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you.","Bryan","Taken"));
         quotes.add(new Quote("You talkin' to me? Then who the hell else are you talking... you talking to me? Well I'm the only one here. Who the fuck do you think you're talking to?", "Travis Bickle", "Taxi Driver"));
         quotes.add(new Quote("I am Groot", "Groot", "Guardians of The Galaxy"));
-        quotes.add(new Quote("“They may take our lives, but they will never take... our FREEDOM!","William Wallace","Braveheart"));
+        quotes.add(new Quote("They may take our lives, but they will never take... our FREEDOM!","William Wallace","Braveheart"));
         quotes.add(new Quote("I see dead people.","Cole Sear","The Sixth Sense"));
         quotes.add(new Quote("Mama always said life was like a box of chocolates. You never know what you're gonna get.","Forest","Forest Gump"));
         quotes.add(new Quote("Say 'what' again. Say 'what' again, I dare you, I double dare you motherfucker, say what one more Goddamn time!", "Jules", "Pulp Fiction"));

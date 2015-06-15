@@ -2,7 +2,9 @@
     <string name="app_name">Movie Quotes</string>
     <string name="activity__wrong_title">Incorrect!</string>
     <string name="activity__wrong_try_again">Try again</string>
-    <string name="activity__wrong_ask">Ask Someone</string>
+    <string name="activity__wrong_facebook">Ask in The Face Book</string>
+    <string name="activity__wrong_facebook_msg">Because Facebook is too cool to follow the Android rules and loves to make developers life more difficult, it needs a button on its own.</string>
+    <string name="activity__wrong_ask">Ask Someone else</string>
     <string name="activity__wrong_ask_message">I am using the app Movie Quotes and I need your help. What is the title of the movie with this quote?</string>
     <string name="app_url">https://play.google.com/store/apps/details?id=com.flat14.movie_quotes</string>
     <string name="activity__wrong_info">You can either try again or ask your friends to help you because you are too stupid to find it by yourself.</string>

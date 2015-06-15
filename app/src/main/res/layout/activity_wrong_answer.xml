@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/red3">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:layout_width="match_parent"
@@ -51,15 +55,34 @@
         android:text="@string/activity__wrong_try_again" />
 
     <Button
-        android:id="@+id/post_facebook"
+        android:id="@+id/post"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/red5"
-        android:layout_marginBottom="20dp"
-        android:textColor="@android:color/white"
         android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/activity__wrong_ask" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/white"
+        android:text="@string/activity__wrong_facebook_msg"/>
+
+    <Button
+        android:id="@+id/facebook"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/red1"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity__wrong_facebook" />
+
 </LinearLayout>
+
+</ScrollView>

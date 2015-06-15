@@ -1,11 +1,14 @@
 package com.flat14.movie_quotes;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.widget.SearchView;
+import android.os.Environment;
 import android.widget.TextView;
 
 import com.flat14.movie_quotes.db.Quote;
+
+import java.io.File;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -34,16 +37,25 @@ public class WrongAnswerActivity extends BaseActivity {
         finish();
     }
 
-    @OnClick(R.id.post_facebook)
-    public void onPostFacebook() {
-        String helpMe = getString(R.string.activity__wrong_ask_message);
-        Quote quote = getIntent().getParcelableExtra(Quote.KEY);
-        helpMe = helpMe + "\n\""+quote.quote+" - "+quote.author+"\"\n" + getString(R.string.app_url);
-
+    @OnClick(R.id.post)
+    public void onPost() {
+        Uri uri = getIntent().getParcelableExtra(Quote.KEY);
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT,helpMe);
-        sendIntent.setType("text/plain");
+        sendIntent.setType("*/*");
+        sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.app_url).toString());
+        sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
         startActivity(Intent.createChooser(sendIntent, getString(R.string.share_intent_chooser_title)));
     }
+
+    @OnClick(R.id.facebook)
+    public void onFacebookPost() {
+        Uri uri = getIntent().getParcelableExtra(Quote.KEY);
+        Intent sendIntent = new Intent(Intent.ACTION_SEND);
+        sendIntent.setType("image/png");
+        sendIntent.setPackage("com.facebook.katana");
+        sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
+        startActivity(Intent.createChooser(sendIntent, getString(R.string.share_intent_chooser_title)));
+    }
+
 
 }
