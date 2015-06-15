@@ -63,7 +63,7 @@ public class Database {
         quotes.add(new Quote("There's no place like home", "Dorothy", "The Wizard of Oz"));
         quotes.add(new Quote("SHOW ME THE MONEYYYYY!", "Jerry", "Jerry Maguire"));
         quotes.add(new Quote("Beneath this mask there's more than flesh. Beneath this mask there is an idea Mr. Creedy. And ideas are bullet proof", "V", "V for Vendetta"));
-        quotes.add(new Quote("What doesn't kill you, makes you .... stranger..","Joker","The Dark Night"));
+        quotes.add(new Quote("What doesn't kill you, makes you .... stranger..","Joker","The Dark knight"));
         quotes.add(new Quote("Good morning, Vietnam! Hey, this is not a test. This is rock and roll.","Adrian Cronauer","Good morning Vietnam"));
         quotes.add(new Quote("I'll have what she's having.", "Client","When Harry Met Sally"));
         quotes.add(new Quote("Here's Johnny!","Jack Torrance","The Shinning"));
