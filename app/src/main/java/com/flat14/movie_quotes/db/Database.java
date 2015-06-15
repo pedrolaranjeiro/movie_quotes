@@ -79,7 +79,7 @@ public class Database {
         quotes.add(new Quote("Gentlemen, you can't fight in here! This is the War Room!", "President Merkin Muffley", "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"));
         quotes.add(new Quote("Ever since I can remember I always wanted to be a gangster. To me that was better than being president of the United States. To be a gangster was to own the world.", "Henry Hill", "Goodfellas"));
         quotes.add(new Quote("Carpe diem. Seize the day, boys. Make your lives extraordinary.", "John Keating", "Dead Poets Society"));
-        quotes.add(new Quote("Bond. James Bond", "James Bond", "Dr No"));
+        quotes.add(new Quote("Bond. James Bond", "James Bond", "Dr. No"));
         quotes.add(new Quote("All those moments will be lost in time… like tears in rain.", "Roy Batty", "Blade Runner"));
         quotes.add(new Quote("I've got a feeling we're not in Kansas anymore","Dorothy","The wizard of oz"));
         quotes.add(new Quote("Wax on, wax off.","Daniel", "The Karate Kid"));
