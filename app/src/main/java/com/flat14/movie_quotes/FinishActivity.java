@@ -1,5 +1,7 @@
 package com.flat14.movie_quotes;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import butterknife.ButterKnife;
@@ -16,7 +18,13 @@ public class FinishActivity extends BaseActivity {
 
     @OnClick(R.id.finish)
     public void onSuggestClick(){
-        // TODO start email activity
-
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto: ")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"flat14.tech@gmail.com"});
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Movie Quotes - Quote Suggestion");
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
+
 }

@@ -74,9 +74,9 @@ public class Database {
         quotes.add(new Quote("You can't handle the truth!","Col. Nathan R. Jessup", "A few good men"));
         quotes.add(new Quote("The greatest trick the Devil ever pulled, was convincing the world he didn't exist","Verbal Kint","The usual suspects"));
         quotes.add(new Quote("Say 'hello' to my little friend!", "Tony Montana", "Scarface"));
-        quotes.add(new Quote("A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti.", "Dr Hannibal", "The Silence of the lamps"));
+        quotes.add(new Quote("A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti.", "Dr Hannibal", "The Silence of the lambs"));
         quotes.add(new Quote("Get busy living, or get busy dying.", "Andy Dufresne", "The Shawshank Redemption"));
-        quotes.add(new Quote("Gentlemen, you can't fight in here! This is the War Room!", "President Merkin Muffley", "Dr Strangelove"));
+        quotes.add(new Quote("Gentlemen, you can't fight in here! This is the War Room!", "President Merkin Muffley", "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"));
         quotes.add(new Quote("Ever since I can remember I always wanted to be a gangster. To me that was better than being president of the United States. To be a gangster was to own the world.", "Henry Hill", "Goodfellas"));
         quotes.add(new Quote("Carpe diem. Seize the day, boys. Make your lives extraordinary.", "John Keating", "Dead Poets Society"));
         quotes.add(new Quote("Bond. James Bond", "James Bond", "Dr No"));
