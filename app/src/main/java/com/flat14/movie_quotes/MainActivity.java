@@ -45,8 +45,6 @@ public class MainActivity extends BaseActivity implements TextView.OnEditorActio
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
-        //fixme debug purposes only
-        startActivity(new Intent(this, FinishActivity.class));
     }
 
     @Override
