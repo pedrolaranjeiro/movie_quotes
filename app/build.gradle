@@ -8,8 +8,8 @@ android {
         applicationId "com.flat14.movie_quotes"
         minSdkVersion 8
         targetSdkVersion 22
-        versionCode 8
-        versionName "1.5.1"
+        versionCode 9
+        versionName "1.5.2"
     }
     buildTypes {
         release {
