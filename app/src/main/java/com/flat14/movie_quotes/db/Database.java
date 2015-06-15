@@ -90,10 +90,11 @@ public class Database {
         quotes.add(new Quote("You mustn't be afraid to dream a little bigger, darling","Eames","Inception"));
         quotes.add(new Quote("Shit! You shoot me in a dream, you better wake up and apologize","Mr White","Reservoir Dogs"));
         quotes.add(new Quote("You're gonna eat lightnin' and you're gonna crap thunder!","Mickey","Rocky"));
-        quotes.add(new Quote("Power is when we have every justification to kill, and we don't.","Oskar Schindler","The Schindler's list"));
+        quotes.add(new Quote("Power is when we have every justification to kill, and we don't.","Oskar Schindler","Schindler's List"));
         quotes.add(new Quote("You know you really don't need a damn forensics team to get to the bottom of this. If you guys were the inventors of Facebook you'd have invented Facebook.","Mark Zuckerberg","The social network"));
         quotes.add(new Quote("Live long and prosper","Spock","Star Trek"));
-        quotes.add(new Quote("Do or do not. There is no try","Yoda","Star wars"));
+        quotes.add(new Quote("You are all singing, all dancing crap of the world.","Tyler Durden","Fight Club"));
+
     }
 
     public Quote getNextQuote(Context context) {

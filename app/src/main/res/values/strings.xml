@@ -12,6 +12,7 @@
     <string name="activity__correct_next_quote">Next Quote</string>
     <string name="activity__finish_info">Wow, you finished the game. Now you need to wait for more famous quotes to be added. Why don\'t you suggest one?</string>
     <string name="activity__finish_suggest_quote">Suggest Quote</string>
+    <string name="activity__finish_classify">Classify Movie Quotes</string>
     <string name="share_intent_chooser_title">Choose</string>
 
 </resources>

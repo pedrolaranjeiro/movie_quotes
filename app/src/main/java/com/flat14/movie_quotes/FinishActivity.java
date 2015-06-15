@@ -27,4 +27,9 @@ public class FinishActivity extends BaseActivity {
         }
     }
 
+    @OnClick(R.id.classify)
+    public void onClassifyClick(){
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.app_url).toString())));
+    }
+
 }
