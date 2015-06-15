@@ -66,7 +66,7 @@ public class Database {
         quotes.add(new Quote("What doesn't kill you, makes you .... stranger..","Joker","The Dark knight"));
         quotes.add(new Quote("Good morning, Vietnam! Hey, this is not a test. This is rock and roll.","Adrian Cronauer","Good morning Vietnam"));
         quotes.add(new Quote("I'll have what she's having.", "Client","When Harry Met Sally"));
-        quotes.add(new Quote("Here's Johnny!","Jack Torrance","The Shinning"));
+        quotes.add(new Quote("Here's Johnny!","Jack Torrance","The Shining"));
         quotes.add(new Quote("I'm going to make him an offer he can't refuse.", "Vito Corleone", "The Godfather"));
         quotes.add(new Quote("Do I feel lucky? Well, do ya, punk?", "Harry Callaghan", "Dirty Harry"));
         quotes.add(new Quote("I love the smell of napalm in the morning.", "Lt. Col. Bill Kilgore", "Apocalypse Now"));
