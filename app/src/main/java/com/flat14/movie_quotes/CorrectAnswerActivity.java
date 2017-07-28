@@ -13,12 +13,12 @@ public class CorrectAnswerActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_correct_answer);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
     @OnClick(R.id.next)
     public void onNextClick() {
-        Prefs.nextQuote(this);
+        Prefs.INSTANCE.nextQuote(this);
         finish();
     }
 
