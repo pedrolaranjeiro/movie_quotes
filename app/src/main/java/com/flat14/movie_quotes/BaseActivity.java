@@ -1,14 +1,13 @@
 package com.flat14.movie_quotes;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.os.ResultReceiver;
 import android.support.v4.app.FragmentActivity;
-import android.view.inputmethod.InputMethodManager;
 
 import com.flat14.movie_quotes.db.Database;
 
-import de.greenrobot.event.EventBus;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+
 
 public class BaseActivity extends FragmentActivity {
 
@@ -28,6 +27,7 @@ public class BaseActivity extends FragmentActivity {
     }
 
     // Dummy Event
+    @Subscribe
     public void onEvent(Object object) {
 
     }

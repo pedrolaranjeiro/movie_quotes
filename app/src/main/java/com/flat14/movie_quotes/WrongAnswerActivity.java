@@ -3,27 +3,24 @@ package com.flat14.movie_quotes;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.widget.TextView;
 
 import com.flat14.movie_quotes.db.Quote;
 
-import java.io.File;
-
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class WrongAnswerActivity extends BaseActivity {
 
-    @InjectView(R.id.wrong_answer)
+    @BindView(R.id.wrong_answer)
     TextView wrongText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wrong_answer);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
     @Override
@@ -39,7 +36,7 @@ public class WrongAnswerActivity extends BaseActivity {
 
     @OnClick(R.id.post)
     public void onPost() {
-        Uri uri = getIntent().getParcelableExtra(Quote.KEY);
+        Uri uri = getIntent().getParcelableExtra(Quote.Companion.getKEY());
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
         sendIntent.setType("*/*");
         sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.app_url).toString());
@@ -49,7 +46,7 @@ public class WrongAnswerActivity extends BaseActivity {
 
     @OnClick(R.id.facebook)
     public void onFacebookPost() {
-        Uri uri = getIntent().getParcelableExtra(Quote.KEY);
+        Uri uri = getIntent().getParcelableExtra(Quote.Companion.getKEY());
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
         sendIntent.setType("image/png");
         sendIntent.setPackage("com.facebook.katana");

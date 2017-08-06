@@ -18,24 +18,26 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.flat14.movie_quotes.db.Quote;
+import com.flat14.movie_quotes.exceptions.NoMoreQuotesException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+
 
 public class MainActivity extends BaseActivity implements TextView.OnEditorActionListener {
 
-    @InjectView(R.id.movie_quote)
+    @BindView(R.id.movie_quote)
     TextView quoteText;
 
-    @InjectView(R.id.movie_actor)
+    @BindView(R.id.movie_actor)
     TextView actorText;
 
-    @InjectView(R.id.movie_title)
+    @BindView(R.id.movie_title)
     EditText titleText;
 
     private Quote currentQuote;
@@ -44,7 +46,7 @@ public class MainActivity extends BaseActivity implements TextView.OnEditorActio
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
     @Override
@@ -61,12 +63,13 @@ public class MainActivity extends BaseActivity implements TextView.OnEditorActio
     }
 
     private void generateQuote() {
-        currentQuote = database.getNextQuote(this);
-        if (currentQuote == null) {
+        try {
+            currentQuote = database.getNextQuote(this);
+            quoteText.setText("\"" + currentQuote.getQuote() + "\"");
+            actorText.setText(currentQuote.getAuthor());
+        } catch (NoMoreQuotesException e) {
+            e.printStackTrace();
             startActivity(new Intent(this, FinishActivity.class));
-        } else {
-            quoteText.setText("\"" + currentQuote.quote + "\"");
-            actorText.setText(currentQuote.author);
         }
     }
 
@@ -84,11 +87,11 @@ public class MainActivity extends BaseActivity implements TextView.OnEditorActio
     }
 
     private void checkResponse(){
-        if (titleText.getText().toString().trim().equalsIgnoreCase(currentQuote.movieTitle)) {
+        if (titleText.getText().toString().trim().equalsIgnoreCase(currentQuote.getMovieTitle())) {
             startActivity(new Intent(MainActivity.this, CorrectAnswerActivity.class));
         } else {
             Intent intent = new Intent(MainActivity.this, WrongAnswerActivity.class);
-            intent.putExtra(Quote.KEY, createImage());
+            intent.putExtra(Quote.Companion.getKEY(), createImage());
             startActivity(intent);
         }
     }
