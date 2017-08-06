@@ -58,20 +58,20 @@ public class MainActivity extends BaseActivity implements TextView.OnEditorActio
     @Override
     protected void onResume() {
         super.onResume();
-        generateQuote();
+//        generateQuote();
         titleText.setText("");
     }
 
-    private void generateQuote() {
-        try {
-            currentQuote = database.getNextQuote(this);
-            quoteText.setText("\"" + currentQuote.getQuote() + "\"");
-            actorText.setText(currentQuote.getAuthor());
-        } catch (NoMoreQuotesException e) {
-            e.printStackTrace();
-            startActivity(new Intent(this, FinishActivity.class));
-        }
-    }
+//    private void generateQuote() {
+//        try {
+//            currentQuote = database.getNextQuote(this);
+//            quoteText.setText("\"" + currentQuote.getQuote() + "\"");
+//            actorText.setText(currentQuote.getAuthor());
+//        } catch (NoMoreQuotesException e) {
+//            e.printStackTrace();
+//            startActivity(new Intent(this, FinishActivity.class));
+//        }
+//    }
 
     @Override
     public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
@@ -87,13 +87,13 @@ public class MainActivity extends BaseActivity implements TextView.OnEditorActio
     }
 
     private void checkResponse(){
-        if (titleText.getText().toString().trim().equalsIgnoreCase(currentQuote.getMovieTitle())) {
-            startActivity(new Intent(MainActivity.this, CorrectAnswerActivity.class));
-        } else {
-            Intent intent = new Intent(MainActivity.this, WrongAnswerActivity.class);
-            intent.putExtra(Quote.Companion.getKEY(), createImage());
-            startActivity(intent);
-        }
+//        if (titleText.getText().toString().trim().equalsIgnoreCase(currentQuote.getMovieTitle())) {
+//            startActivity(new Intent(MainActivity.this, CorrectAnswerActivity.class));
+//        } else {
+//            Intent intent = new Intent(MainActivity.this, WrongAnswerActivity.class);
+//            intent.putExtra(Quote.Companion.getKEY(), createImage());
+//            startActivity(intent);
+//        }
     }
 
     private Uri createImage() {

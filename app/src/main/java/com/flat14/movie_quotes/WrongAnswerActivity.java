@@ -36,22 +36,22 @@ public class WrongAnswerActivity extends BaseActivity {
 
     @OnClick(R.id.post)
     public void onPost() {
-        Uri uri = getIntent().getParcelableExtra(Quote.Companion.getKEY());
-        Intent sendIntent = new Intent(Intent.ACTION_SEND);
-        sendIntent.setType("*/*");
-        sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.app_url).toString());
-        sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
-        startActivity(Intent.createChooser(sendIntent, getString(R.string.share_intent_chooser_title)));
+//        Uri uri = getIntent().getParcelableExtra(Quote.Companion.getKEY());
+//        Intent sendIntent = new Intent(Intent.ACTION_SEND);
+//        sendIntent.setType("*/*");
+//        sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.app_url).toString());
+//        sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
+//        startActivity(Intent.createChooser(sendIntent, getString(R.string.share_intent_chooser_title)));
     }
 
     @OnClick(R.id.facebook)
     public void onFacebookPost() {
-        Uri uri = getIntent().getParcelableExtra(Quote.Companion.getKEY());
-        Intent sendIntent = new Intent(Intent.ACTION_SEND);
-        sendIntent.setType("image/png");
-        sendIntent.setPackage("com.facebook.katana");
-        sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
-        startActivity(Intent.createChooser(sendIntent, getString(R.string.share_intent_chooser_title)));
+//        Uri uri = getIntent().getParcelableExtra(Quote.Companion.getKEY());
+//        Intent sendIntent = new Intent(Intent.ACTION_SEND);
+//        sendIntent.setType("image/png");
+//        sendIntent.setPackage("com.facebook.katana");
+//        sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
+//        startActivity(Intent.createChooser(sendIntent, getString(R.string.share_intent_chooser_title)));
     }
 
 
