@@ -1,6 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/blue3">
 
     <LinearLayout
@@ -13,9 +14,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/movie_actor"
-            android:layout_margin="20dp"
+            android:layout_margin="16dp"
             android:textColor="@android:color/white"
-            android:textSize="22sp"
+            android:textSize="14sp"
+            tools:text="This is a quote someone famous said and someone else needs to find out which movie it belongs to. "
             android:textStyle="bold|italic" />
 
         <TextView
@@ -34,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_margin="16dp"
             android:hint="Write the movie title"
             android:singleLine="true"
             android:textColor="@android:color/white"

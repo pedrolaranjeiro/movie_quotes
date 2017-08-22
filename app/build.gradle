@@ -21,6 +21,13 @@ android {
     lintOptions {
         abortOnError false
     }
+    packagingOptions {
+        exclude 'META-INF/services/com.fasterxml.jackson.core.JsonFactory'
+        exclude 'META-INF/services/com.fasterxml.jackson.core.ObjectCodec'
+        exclude 'META-INF/services/org.restlet.engine.converter.ConverterHelper'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
 }
 
 dependencies {
@@ -32,9 +39,7 @@ dependencies {
     // Event Bus. Allow to decouple the code
     compile 'org.greenrobot:eventbus:3.0.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    // Restlet client
+    compile "net.apispark.webapi:MovieQuotes:1.0.0"
+}
 
-    compile "org.restlet.android:org.restlet.lib.org.json:2.0"
-}
-repositories {
-    mavenCentral()
-}

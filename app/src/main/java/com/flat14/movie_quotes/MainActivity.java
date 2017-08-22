@@ -1,29 +1,29 @@
 package com.flat14.movie_quotes;
 
-import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.os.Message;
-import android.os.ResultReceiver;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewOutlineProvider;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.flat14.movie_quotes.db.Quote;
-import com.flat14.movie_quotes.exceptions.NoMoreQuotesException;
+import net.apispark.webapi.Sdk;
+import net.apispark.webapi.representation.Quote;
+import net.apispark.webapi.resource.client.QuoteListClientResource;
+import net.apispark.webapi.security.SecurityConfig;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity implements TextView.OnEditorActio
     @BindView(R.id.movie_title)
     EditText titleText;
 
-    private Quote currentQuote;
+    private Sdk api;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,14 +53,41 @@ public class MainActivity extends BaseActivity implements TextView.OnEditorActio
     protected void onStart() {
         super.onStart();
         titleText.setOnEditorActionListener(this);
+        api = new Sdk();
+        SecurityConfig securityConfig = api.getConfig().getSecurityConfig();
+        securityConfig.configureAuthHTTP_BASIC("moviequotestester", "testtest");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-//        generateQuote();
+        generateQuote();
         titleText.setText("");
     }
+
+    private void generateQuote() {
+        new FetchNextQuote().execute();
+    }
+
+    class FetchNextQuote extends AsyncTask<Void,Void, Void>{
+
+        private Quote currentQuote;
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            currentQuote =api.quote("7c92ae00-7205-11e7-96b9-bdfd4b9e2934").getQuotesQuoteid();
+            return null;
+    }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            quoteText.setText("\"" + currentQuote.getDialog() + "\"");
+            actorText.setText(currentQuote.getAuthor());
+        }
+
+    }
+
 
 //    private void generateQuote() {
 //        try {
